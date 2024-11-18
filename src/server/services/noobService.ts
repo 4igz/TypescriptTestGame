@@ -73,6 +73,7 @@ export class NoobService implements OnStart, OnTick {
 				const newNoob = this.noobFolder.FindFirstChild(nextNoobConfig.name);
 				assert(newNoob, `Noob ${nextNoobConfig.name} not found in NoobFolder`);
 
+				// Sucessfully merged
 				this.plotService.removeNoobForPlayer(player, initialNoob);
 				this.plotService.removeNoobForPlayer(player, targetNoob);
 				initialNoob.Destroy();
